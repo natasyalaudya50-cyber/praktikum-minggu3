@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Natasya Laudya</title>
+
+<style>
+
+:root{
+--primary:#7c3aed;
+--secondary:#ec4899;
+--bg:#ef89cb;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#7ec4f0,#7ec4f0);
+color:#333;
+}
+
+/* Navbar */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:var(--primary);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--secondary);
+}
+
+/* Hero */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid rgb(204, 237, 154);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.hero img:hover{
+transform:scale(1.1) rotate(3deg);
+}
+
+.hero h1{
+font-size:36px;
+opacity:0;
+animation:muncul 2s forwards;
+}
+
+@keyframes muncul{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes warna{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+@keyframes gerak{
+from{
+transform:translateX(-20px);
+}
+to{
+transform:translateX(20px);
+}
+}
+
+.hero p{
+margin-top:10px;
+color:#000000;
+}
+
+/* Section */
+
+section{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+section h2{
+margin-bottom:30px;
+color:var(--primary);
+}
+
+/* Skill */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skills span{
+background:var(--primary);
+color:rgb(255, 253, 149);
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* Portfolio */
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgb(123, 139, 0);
+border-radius:15px;
+padding:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3{
+color:var(--secondary);
+margin-bottom:10px;
+}
+
+/* Contact */
+
+.contact a{
+display:block;
+margin-bottom:10px;
+text-decoration:none;
+color:#555;
+}
+
+.contact a:hover{
+color:var(--secondary);
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:30px;
+background:rgb(198, 252, 105);
+margin-top:40px;
+color:#92944e;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+<h2>Natasya</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skill">Skill</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- Hero -->
+
+<div class="hero">
+<img src="Natasya.jpeg">
+<h1>Natasya Laudya</h1>
+<p>Mahasiswa Teknik Informatika | Web Developer | Desain Grafis</p>
+</div>
+
+<!-- About -->
+
+<section id="about">
+<h2>Tentang Saya</h2>
+<p>
+Saya adalah mahasiswa Teknik Informatika di Universitas Muhammadiyah Sumatera Utara
+yang memiliki minat dalam bidang teknologi, pengembangan web, serta desain grafis.
+Saya terus belajar dan mengembangkan kemampuan untuk menciptakan solusi digital
+yang bermanfaat bagi masyarakat.
+</p>
+</section>
+
+<!-- Skill -->
+
+<section id="skill">
+<h2>Keterampilan</h2>
+
+<div class="skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>MySQL</span>
+<span>Canva</span>
+<span>Photoshop</span>
+<span>Node.js</span>
+</div>
+
+</section>
+
+<!-- Portfolio -->
+
+<section id="portfolio">
+<h2>Portfolio Project</h2>
+
+<div class="portfolio-grid">
+
+<div class="card">
+<h3>Website CV Online</h3>
+<p>Membuat website CV pribadi menggunakan HTML dan CSS dengan desain modern.</p>
+</div>
+
+<div class="card">
+<h3>Website Portfolio</h3>
+<p>Membangun portfolio pribadi untuk menampilkan project dan skill.</p>
+</div>
+
+<div class="card">
+<h3>Desain Konten Sosial Media</h3>
+<p>Membuat desain promosi menggunakan Canva dan Photoshop.</p>
+</div>
+
+<div class="card">
+<h3>Admin Toko Online</h3>
+<p>Mengelola penjualan produk dan pelayanan pelanggan melalui TikTok Shop.</p>
+</div>
+
+</div>
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+<h2>Kontak</h2>
+
+<div class="contact">
+<a href="mailto:natasyalaudya50@gmail.com">📧 natasyalaudya50@gmail.com</a>
+<a href="tel:+6285767619511">📱 0857-6761-9511</a>
+<a href="https://instagram.com/ntsyaaa_ldyaa">📷 Instagram</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Natasya Laudya
+</footer>
+
+</body>
+</html>
